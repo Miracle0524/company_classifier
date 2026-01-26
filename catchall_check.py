@@ -11,6 +11,10 @@ from urllib.request import Request, urlopen
 
 DEFAULT_FETCH_COUNT = 5000
 APIFY_BATCH_SIZE = 100
+DEFAULT_ACTOR_ID = "IoSHqwTR9YGhzccez"
+TRUELIST_VERIFY_URL = "https://api.truelist.io/api/v1/verify_inline"
+APIFY_TOKEN = "apify_api_Ddw9Pf3wzmReHrB2sNcXhbjID0qelQ0AJB2N"
+TRUELIST_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMyMDRlNzYyLTk3Y2YtNDQ5YS1iZjA2LWE2MjRmYWJlZjBhYiIsImV4cGlyZXNfYXQiOm51bGx9.c4uUaYBHpyEuCjRuks7f-nZRR7QZ-9SwCPSQ-La4QhU"
 TRUELIST_SUB_STATES = [
     "email_ok",
     "accept_all",
