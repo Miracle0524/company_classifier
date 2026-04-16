@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
 
 APIFY_BASE = "https://api.apify.com/v2"
-APIFY_TOKEN = "apify_api_pNWQeTxIHYrT476LdRHWxb9wSyAG4S39YICl"
+APIFY_TOKEN = ""
 
 ACTOR_ID = "Vd7FKoadBUvv0aWP1"
 OUTPUT_FILE = Path("total.json")
