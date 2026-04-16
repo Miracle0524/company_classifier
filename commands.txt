@@ -1,0 +1,2 @@
+# Remove column
+python -c "import csv,sys;d={'founded','id','industry'};i,o=sys.argv[1:3];f=open(i,newline='',encoding='utf-8');r=csv.DictReader(f);k=[x for x in r.fieldnames if x not in d];g=open(o,'w',newline='',encoding='utf-8');w=csv.DictWriter(g,fieldnames=k);w.writeheader();[w.writerow({c:row.get(c,'') for c in k}) for row in r];f.close();g.close()" blank.csv output.csv
