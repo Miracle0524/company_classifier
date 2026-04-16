@@ -13,12 +13,16 @@ from pathlib import Path
 from typing import Any, Dict, Iterator, List, Optional, Tuple
 
 import requests
+from dotenv import load_dotenv
+
+_ENV_PATH = Path(__file__).resolve().parent / ".env"
+load_dotenv(_ENV_PATH)
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
 
 APIFY_BASE = "https://api.apify.com/v2"
-APIFY_TOKEN = ""
+APIFY_TOKEN = (os.environ.get("APIFY_TOKEN") or os.environ.get("APIFY_API_TOKEN") or "").strip()
 
 ACTOR_ID = "Vd7FKoadBUvv0aWP1"
 OUTPUT_FILE = Path("total.json")
